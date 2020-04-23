@@ -1,16 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
+import uuid from "react-uuid";
 
 const mapStateToProps = (state) => {
-  console.log("in mapstateto prop", state);
   return { articles: state.articles };
 };
 
 const ConnectedList = ({ articles }) => (
   <ul>
-    {articles.map((el) => (
-      <li key={el.id}>{el.title}</li>
-    ))}
+    {articles.map((el) => {
+      return <li key={uuid()}>{el.title}</li>;
+    })}
   </ul>
 );
 

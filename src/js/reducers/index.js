@@ -11,8 +11,6 @@ function rootReducer(state = initialState, action) {
     });
   }
 
-  console.log("about to return state from the reducer", state);
-
   return state;
 }
 
