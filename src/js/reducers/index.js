@@ -6,11 +6,12 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
   if (action.type === ADD_ARTICLE) {
-    // jjjj, check if we need assign three parameters
     return Object.assign({}, state, {
       articles: state.articles.concat(action.payload),
     });
   }
+
+  console.log("about to return state from the reducer", state);
 
   return state;
 }
